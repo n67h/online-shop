@@ -1,0 +1,139 @@
+/* ===============THIS IS WHERE ALL THE CUSTOM CSS ARE=============== */
+/* MY COLORS
+
+#292b2c
+#262626 */
+
+
+
+/* ===============HEADER=============== */
+.dropdown-item:hover {
+    background-color: #292b2c;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ===============LOGIN=============== */
+#btn-login {
+    width: 50%;
+    margin: auto;
+    height: 4em;
+}
+/* ===============RESEND EMAIL=============== */
+#btn-resend {
+    width: 50%;
+    margin: auto;
+    height: 4em;
+}
+/* ===============REGISTRATION=============== */
+.form-control {
+    width: 50%;
+    margin: auto;
+}
+
+.form-label {
+    padding-left: 25%;
+    white-space: nowrap;
+}
+
+.form-check {
+    width: 50%;
+    margin: auto;
+}
+
+#btn-register {
+    width: 50%;
+    margin: auto;
+    height: 4em;
+}
+
+.error {
+    color: red;
+}
+
+.success {
+    color: green;
+}
+
+@media (max-width: 1200px) {
+    .form-control {
+        width: 100%;
+        margin: auto;
+    }
+    
+    .form-label {
+        padding-left: 5%;
+        white-space: nowrap;
+    }
+    
+    .form-check {
+        width: 100%;
+        margin: auto;
+    }
+
+    #btn-register {
+        width: 100%;
+        margin: auto;
+        height: 3em;
+    }
+
+    #btn-login {
+        width: 100%;
+        margin: auto;
+        height: 3em;
+    }
+}
+
+/* ===============INDEX=============== */
+.carousel .carousel-item {
+    height: 600px;  
+}
+
+.carousel-item img {
+    position: absolute;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    height: 100%;
+}
+
+/* ===============FOOTER=============== */
+footer {
+    margin-top: auto;
+}
+
+footer a {
+    text-decoration: none;
+}
+
+footer ul li a {
+    font-size: 23px;
+}
+
+.fa-facebook:hover {
+    color: #4267B2;
+}
+
+.fa-twitter:hover {
+    color: #00acee;
+}
+
+.fa-instagram:hover {
+    color: #cd486b;
+}
+
+.fa-youtube:hover {
+    color: #FF0000;
+}
+
+.fa-github:hover {
+    color: #808080;
+}
+
+.fa-linkedin:hover {
+    color: #0072b1;
+}

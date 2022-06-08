@@ -1,0 +1,71 @@
+0*****June 3, 2022*****
+//Create account
+//Verification link through email
+//Verify
+//If you login without verifying your account, you still need to click the link from your email to be able to proceed.
+//If you otherwise deleted the email, you can still request to resend the verification link.
+
+*****June 4, 2022*****
+//login
+//Forgot password
+
+*****June 5, 2022*****
+//session
+//dynamic dropdown if user is logged in or not
+
+*****June 6, 2022*****
+rest day
+
+*****June 7, 2022*****
+rest day
+
+*****June 8, 2022*****
+make a repo for github
+
+*****June 9, 2022*****
+customer side profile
+change password
+
+
+
+pag nag check-out, at more than 1 yung product na chineck-out, yung last product_id lang yung na-iinsert sa db, of course. possible solution is gayahin yung sa last sem na orders_tbl, then create another table na may order_details.
+paypal
+view products for each order
+search in tables
+filter tables
+fix category dropdown	
+notification
+total orders per month
+services
+shipping fee
+change the status of order
+Invoice
+email right after the place order
+email when the order is on processing already
+email when the order is delivered
+email when the order is canceled
+choice for cod or paypal
+
+all table have deleted by column
+admin can track what staff does
+create table for activity log
+wishlist
+pagination for search, filter by category
+
+
+feedback
+show archived records
+change password
+access of users
+show most sold product
+show most sold category - possible solution, gumamit ng 2 inner join sa 3 table
+fix admin panel
+fix dashboard
+Inventory
+price 
+Profile page
+Add to cart
+Chatbot
+Cascade delete/update
+When one data from parent table got soft deleted/or permanently deleted, all the data with relation to it will also deleted.*****
+Using join >> get the id of the current row >> if the id has a relationship to a row on parent table with is_deleted = 1 >> soft delete the row on child table.*****

@@ -1,0 +1,74 @@
+sql_mode=NO_ZERO_IN_DATE,NO_ZERO_DATE,NO_ENGINE_SUBSTITUTION
+
+CREATE TABLE user_roles (
+	user_role_id int(11) PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    role varchar(25) NOT NULL,
+    date_added timestamp DEFAULT CURRENT_TIMESTAMP,
+    last_updated timestamp DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+
+CREATE TABLE users (
+	user_id int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    f_name varchar(50) NOT NULL,
+    l_name varchar(50) NOT NULL,
+    email varchar(50) NOT NULL,
+    user_role_id int(11) NOT NULL DEFAULT 1,
+    password varchar(255) NOT NULL,
+    verification_key varchar(50),
+    is_verified tinyint NOT NULL DEFAULT 0,
+    added_by int(11),
+    deleted_by int(11),
+    is_deleted tinyint NOT NULL DEFAULT 0,
+    last_login timestamp,
+    date_added timestamp DEFAULT CURRENT_TIMESTAMP,
+    last_updated timestamp DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    
+    FOREIGN KEY(user_role_id) REFERENCES user_roles(user_role_id) ON DELETE CASCADE ON UPDATE CASCADE,
+    FOREIGN KEY(added_by) REFERENCES users(user_id) ON DELETE CASCADE ON UPDATE CASCADE,
+    FOREIGN KEY(deleted_by) REFERENCES users(user_id) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+CREATE TABLE user_info (
+	user_info_id int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    user_id int(11) NOT NULL,
+    profile_img varchar(255),
+    phone_no varchar(25),
+    region_1 varchar(25),
+    province_1 varchar(25),
+    city_1 varchar(25),
+    barangay_1 varchar(25),
+    postal_code_1 varchar(25),
+    street_1 varchar(255),
+    region_2 varchar(25),
+    province_2 varchar(25),
+    city_2 varchar(25),
+    barangay_2 varchar(25),
+    postal_code_2 varchar(25),
+    street_2 varchar(255),
+    region_3 varchar(25),
+    province_3 varchar(25),
+    city_3 varchar(25),
+    barangay_3 varchar(25),
+    postal_code_3 varchar(25),
+    street_3 varchar(255),
+    region_4 varchar(25),
+    province_4 varchar(25),
+    city_4 varchar(25),
+    barangay_4 varchar(25),
+    postal_code_4 varchar(25),
+    street_4 varchar(255),
+   	is_deleted tinyint NOT NULL DEFAULT 0,
+    date_added timestamp DEFAULT CURRENT_TIMESTAMP,
+    last_updated timestamp DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    
+    FOREIGN KEY(user_id) REFERENCES users(user_id) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+CREATE TABLE password_reset (
+	password_reset_id int(11) PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    password_reset_email text NOT NULL,
+    password_reset_selector text NOT NULL,
+    password_reset_token longtext NOT NULL,
+    password_reset_expires text NOT NULL
+);
